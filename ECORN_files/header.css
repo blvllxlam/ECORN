@@ -482,3 +482,16 @@ body.admin-bar header.wp-block-template-part:has(> .ecocane-header) {
     font-size: 8.5px;
   }
 }
+
+
+/* Финальная компоновка контактов: компактная шапка без сжатия меню. */
+@media (min-width: 1101px) {
+  .ecocane-header {
+    grid-template-columns: clamp(150px, 21vw, 280px) minmax(0, 1fr) auto;
+  }
+  .ecocane-header .wp-block-navigation { min-width: 0; }
+  .ecocane-header-contacts { gap: 4px; margin-right: 8px; }
+  .ecocane-header-email__icon,
+  .ecocane-header-phone__icon { flex-basis: 30px; width: 30px; height: 30px; }
+  .ecocane-header-email__address { font-size: 11px; }
+}
