@@ -308,30 +308,36 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 <meta name="msapplication-TileImage" content="https://eco-cane.group/wp-content/uploads/2026/10/cropped-Favicon-270x270.png">
 <script src="./ECORN_files/wp-emoji-release.min.js.Без названия" defer=""></script>
 <style id="github-pages-static-fixes">
-  /* Страница опубликована как статическая копия: скрываем панель администратора WordPress */
+  /* Убираем верхний отступ WordPress и панель администратора */
   #wpadminbar { display: none !important; }
-  html { margin-top: 0 !important; }
-  @media screen and (max-width: 782px) { html { margin-top: 0 !important; } }
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-    /* Скрываем корзину и личный кабинет в статической версии */
-    .wc-block-mini-cart,
-    .wp-block-woocommerce-mini-cart,
-    .wc-block-customer-account,
-    .wp-block-woocommerce-customer-account {
-      display: none !important;
-    }
-
-  /* Поднимаем шапку к самому верху страницы */
+  /* Шапка начинается от верхнего края страницы */
   .wp-site-blocks {
-    margin-block-start: 0 !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
     padding-block-start: 0 !important;
   }
+  header.wp-block-template-part,
   .wp-block-template-part {
+    margin-top: 0 !important;
     margin-block-start: 0 !important;
   }
   .ecocane-header {
+    margin-top: 0 !important;
     margin-block-start: 0 !important;
     padding-top: 0 !important;
+  }
+
+  /* Скрываем элементы, которые не работают в статической версии */
+  .wc-block-mini-cart,
+  .wp-block-woocommerce-mini-cart,
+  .wc-block-customer-account,
+  .wp-block-woocommerce-customer-account {
+    display: none !important;
   }
 </style>
 
