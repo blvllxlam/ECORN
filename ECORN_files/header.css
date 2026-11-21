@@ -233,3 +233,117 @@ body.admin-bar header.wp-block-template-part:has(> .ecocane-header) {
     transparent 13.5px
   );
 }
+
+
+/* Контактный телефон справа в шапке. */
+.ecocane-header-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.ecocane-header-phone__icon {
+  display: inline-flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.ecocane-header-phone__icon svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+.ecocane-header-phone__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ecocane-header-phone__label {
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.ecocane-header-phone__number {
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.ecocane-header-phone__icon:hover,
+.ecocane-header-phone__number:hover {
+  color: #e1eedf !important;
+}
+
+.ecocane-header-phone__icon:focus-visible,
+.ecocane-header-phone__number:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 782px) {
+  .ecocane-header-phone {
+    gap: 5px;
+  }
+
+  .ecocane-header-phone__icon {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .ecocane-header-phone__number {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ecocane-header {
+    grid-template-columns: minmax(112px, 1fr) auto auto;
+  }
+
+  .ecocane-header-phone {
+    gap: 4px;
+  }
+
+  .ecocane-header-phone__icon {
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
+    border: 0;
+  }
+
+  .ecocane-header-phone__icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .ecocane-header-phone__label {
+    display: none;
+  }
+
+  .ecocane-header-phone__number {
+    font-size: 10.5px;
+  }
+
+  .ecocane-header > .wp-block-group.is-layout-flex:nth-child(2) {
+    gap: 3px;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+}
