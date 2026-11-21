@@ -495,3 +495,43 @@
     border-color: #4b8b3b !important;
     box-shadow: 0 6px 20px rgba(75, 139, 59, 0.18);
 }
+
+
+/* Шапка до 1100px: меню сворачивается, контакты остаются над корзиной. */
+@media (max-width: 1100px) {
+  .ecocane-header { grid-template-columns: minmax(150px, 1fr) auto auto; grid-template-rows: 90px; }
+  .ecocane-header > .wp-block-group.is-layout-flex:nth-child(2) {
+    grid-column: 2; grid-row: 1; min-width: 0; gap: 4px; padding-right: 8px; padding-left: 8px;
+  }
+  .ecocane-header .wp-block-navigation { grid-column: 3; grid-row: 1; justify-self: end; width: auto; }
+  .ecocane-header .wp-block-navigation__responsive-container-open { display: flex !important; }
+  .ecocane-header .wp-block-navigation__responsive-container:not(.is-menu-open) { display: none !important; }
+  .ecocane-header .wp-block-navigation__responsive-container.is-menu-open { display: flex !important; }
+}
+
+/* На телефонах освобождаем место под адрес почты и иконки действий. */
+@media (max-width: 520px) {
+  .ecocane-header { grid-template-columns: minmax(112px, 1fr) auto auto; grid-template-rows: 78px; }
+  .ecocane-header > .wp-block-group.is-layout-flex:nth-child(2) { gap: 2px; padding-right: 3px; padding-left: 3px; }
+  .ecocane-header-contacts { gap: 2px; margin-right: 0; }
+  .ecocane-header-phone, .ecocane-header-email { gap: 3px; }
+  .ecocane-header-phone__icon, .ecocane-header-email__icon { flex-basis: 22px; width: 22px; height: 22px; }
+  .ecocane-header-phone__number { font-size: 10px; }
+  .ecocane-header-email__address { font-size: 8.5px; }
+}
+
+/* На очень узких экранах оставляем короткие контакты и уменьшаем служебные иконки. */
+@media (max-width: 359px) {
+  .ecocane-header { grid-template-columns: minmax(92px, 1fr) auto auto; grid-template-rows: 72px; }
+  .ecocane-header-contacts { gap: 1px; }
+  .ecocane-header-email__icon { display: none; }
+  .ecocane-header-phone__icon { flex-basis: 19px; width: 19px; height: 19px; }
+  .ecocane-header-phone__icon svg { width: 15px; height: 15px; }
+  .ecocane-header-phone__number { font-size: 9px; }
+  .ecocane-header-email__address { font-size: 7.5px; }
+  .ecocane-header .wc-block-mini-cart__button { min-width: 30px; padding: 2px !important; }
+  .ecocane-header .wc-block-mini-cart__icon,
+  .ecocane-header .wc-block-customer-account__link svg,
+  .ecocane-header .wc-block-customer-account__link img { width: 24px; height: 24px; }
+  .ecocane-header .wp-block-navigation__responsive-container-open { padding: 3px !important; }
+}
