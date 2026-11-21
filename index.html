@@ -324,6 +324,13 @@ body.admin-bar header.wp-block-template-part:has(> .ecocane-header) {
   top: 0 !important;
 }
 /* Скрываем элементы, которые не работают в статической копии */
+
+  /* Скрываем корзину и личный кабинет в шапке статической версии */
+  .wp-block-woocommerce-mini-cart,
+  .wc-block-mini-cart,
+  .wp-block-woocommerce-customer-account {
+    display: none !important;
+  }
 </style>
 
 </head>
