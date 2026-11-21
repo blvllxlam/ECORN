@@ -347,3 +347,138 @@ body.admin-bar header.wp-block-template-part:has(> .ecocane-header) {
     padding-left: 4px;
   }
 }
+
+
+/* Контактные данные в шапке: телефон сверху, почта ниже. */
+.ecocane-header-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  margin-right: clamp(8px, 1vw, 16px);
+}
+
+.ecocane-header-email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.ecocane-header-email__icon {
+  display: inline-flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.ecocane-header-email__icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.ecocane-header-email__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ecocane-header-email__label {
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.ecocane-header-email__address {
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.ecocane-header-email__icon:hover,
+.ecocane-header-email__address:hover {
+  color: #e1eedf !important;
+}
+
+.ecocane-header-email__icon:focus-visible,
+.ecocane-header-email__address:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 782px) {
+  .ecocane-header-contacts {
+    gap: 3px;
+    margin-right: 5px;
+  }
+
+  .ecocane-header-phone,
+  .ecocane-header-email {
+    gap: 5px;
+  }
+
+  .ecocane-header-phone__icon,
+  .ecocane-header-email__icon {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .ecocane-header-email__address {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ecocane-header-contacts {
+    gap: 2px;
+    margin-right: 2px;
+  }
+
+  .ecocane-header-phone,
+  .ecocane-header-email {
+    gap: 3px;
+  }
+
+  .ecocane-header-phone__icon,
+  .ecocane-header-email__icon {
+    flex-basis: 22px;
+    width: 22px;
+    height: 22px;
+    border: 0;
+  }
+
+  .ecocane-header-phone__icon svg,
+  .ecocane-header-email__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ecocane-header-phone__label,
+  .ecocane-header-email__label {
+    display: none;
+  }
+
+  .ecocane-header-phone__number {
+    font-size: 10px;
+  }
+
+  .ecocane-header-email__address {
+    font-size: 8.5px;
+  }
+}
