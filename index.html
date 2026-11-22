@@ -763,6 +763,44 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
   }
 }
 
+
+/* Увеличиваем логотип: исходное изображение имеет пропорции 1408×768 */
+@media (min-width: 783px) {
+  .ecocane-header {
+    grid-template-columns: 210px minmax(0, 1fr) 205px !important;
+    grid-template-rows: minmax(104px, auto) !important;
+  }
+  .ecocane-header > .ecocane-brand {
+    width: 210px !important;
+    height: 96px !important;
+    max-height: 96px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .ecocane-header > .ecocane-brand img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 90px !important;
+    object-fit: contain !important;
+  }
+}
+@media (max-width: 782px) {
+  .ecocane-header > .ecocane-brand {
+    width: 160px !important;
+    height: 74px !important;
+    max-height: 74px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .ecocane-header > .ecocane-brand img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 68px !important;
+    object-fit: contain !important;
+  }
+}
 </style>
 
 </head>
