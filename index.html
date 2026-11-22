@@ -1771,6 +1771,30 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
 
 /* Мобильная версия: контактный блок прижат вправо; телефон сверху, почта снизу. */
 @media (max-width: 782px) {
+  /* Контакты закреплены в правом верхнем углу шапки; логотип остаётся слева. */
+  .ecocane-header { position: relative !important; }
+  .ecocane-header > .wp-block-group {
+    position: absolute !important;
+    top: 8px !important;
+    right: 14px !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    justify-self: auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+  }
+  .ecocane-header > .ecocane-brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+    align-self: center !important;
+  }
+  .ecocane-header > .ecocane-category-nav {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+  }
   .ecocane-header .ecocane-header-contacts {
     display: flex !important;
     flex-direction: column !important;
