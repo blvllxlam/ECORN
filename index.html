@@ -1192,6 +1192,29 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
 .ecocane-hero__shine{position:absolute;z-index:-1;top:-45%;right:-13%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 68%);pointer-events:none}
 @media(max-width:700px){.ecocane-hero{grid-template-columns:1fr;gap:8px;width:calc(100% - 24px);min-height:0;margin:14px auto 20px;padding:22px 20px 18px;border-radius:22px}.ecocane-hero__eyebrow{margin-bottom:12px;font-size:10px}.ecocane-hero h1{font-size:clamp(30px,8vw,40px)!important}.ecocane-hero__meta{margin-top:15px;padding:11px 15px}.ecocane-hero__visual{min-height:145px;margin-top:3px}.ecocane-hero__visual img{max-height:180px;max-width:280px}.ecocane-hero__halo{width:min(75%,220px)}}
 @media(prefers-reduced-motion:no-preference){.ecocane-hero__visual img{animation:ecocane-float 7s ease-in-out infinite}@keyframes ecocane-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}}
+
+/* Компактная версия первого экрана */
+.ecocane-hero{min-height:230px;padding:26px clamp(22px,3vw,34px);gap:clamp(12px,2vw,26px);margin:18px auto 24px}
+.ecocane-hero__visual{min-height:170px}
+.ecocane-hero__halo{width:min(100%,260px)}
+.ecocane-hero__visual img{max-width:290px;max-height:210px}
+.ecocane-hero__eyebrow{margin-bottom:10px}
+.ecocane-hero__meta{margin-top:14px;padding:10px 14px 11px}
+@media(max-width:700px){
+  .ecocane-hero{position:relative;display:block;width:calc(100% - 20px);min-height:0;margin:10px auto 16px;padding:16px 17px 14px;border-radius:19px;overflow:hidden}
+  .ecocane-hero__copy{z-index:3}
+  .ecocane-hero__eyebrow{margin-bottom:7px;font-size:9px;letter-spacing:.13em}
+  .ecocane-hero h1{position:relative;z-index:3;font-size:clamp(26px,7.2vw,34px)!important;line-height:1.02!important;letter-spacing:-.04em}
+  .ecocane-hero h1 small{margin-top:3px;font-size:.4em}
+  .ecocane-hero__meta{position:relative;z-index:3;margin-top:10px;padding:8px 12px 9px;gap:3px;border-radius:12px}
+  .ecocane-hero__meta-label{font-size:9px}
+  .ecocane-hero__meta strong{font-size:20px}
+  .ecocane-hero__meta-note{font-size:10px}
+  .ecocane-hero__visual{position:absolute;z-index:1;top:27px;left:50%;display:flex;width:100%;height:145px;min-height:0;margin:0;transform:translateX(-50%);opacity:.34;pointer-events:none}
+  .ecocane-hero__visual img{width:100%;max-width:230px;max-height:145px;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.2))}
+  .ecocane-hero__halo{width:min(65%,190px);box-shadow:0 0 0 1px rgba(255,255,255,.07),0 0 0 14px rgba(255,255,255,.02)}
+  .ecocane-hero__shine{top:-35%;right:-25%;width:75%}
+}
 </style>
 </head>
 
