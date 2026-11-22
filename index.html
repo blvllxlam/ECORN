@@ -1215,6 +1215,111 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
   .ecocane-hero__halo{width:min(65%,190px);box-shadow:0 0 0 1px rgba(255,255,255,.07),0 0 0 14px rgba(255,255,255,.02)}
   .ecocane-hero__shine{top:-35%;right:-25%;width:75%}
 }
+
+/* Мобильный первый экран: полноценная композиция, а не фоновая картинка */
+@media(max-width:700px){
+  .ecocane-hero{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+    gap:0;
+    width:calc(100% - 24px);
+    min-height:0;
+    margin:12px auto 20px;
+    padding:20px 18px 48px;
+    border-radius:24px;
+    text-align:center;
+    background-image:radial-gradient(ellipse at 50% 22%,rgba(255,255,255,.13),transparent 48%),linear-gradient(155deg,#123d2b 0%,#1d6242 62%,#2d754c 100%);
+  }
+  .ecocane-hero--corn{
+    background-image:radial-gradient(ellipse at 50% 22%,rgba(255,255,255,.13),transparent 48%),linear-gradient(155deg,#183e2c 0%,#245c3c 62%,#806e32 100%);
+  }
+  .ecocane-hero__visual{
+    position:relative;
+    inset:auto;
+    grid-row:1;
+    display:flex;
+    width:100%;
+    height:auto;
+    min-height:0;
+    margin:0 auto 4px;
+    transform:none;
+    opacity:1;
+    pointer-events:none;
+  }
+  .ecocane-hero__visual img{
+    width:min(82%,300px);
+    max-width:300px;
+    max-height:190px;
+    object-fit:contain;
+    filter:drop-shadow(0 16px 18px rgba(0,0,0,.23));
+  }
+  .ecocane-hero__halo{
+    width:min(68%,205px);
+    box-shadow:0 0 0 1px rgba(255,255,255,.11),0 0 0 17px rgba(255,255,255,.035);
+  }
+  .ecocane-hero__copy{
+    grid-row:2;
+    text-align:center;
+  }
+  .ecocane-hero__eyebrow{
+    justify-content:center;
+    margin:0 0 10px;
+    font-size:9px;
+    letter-spacing:.14em;
+  }
+  .ecocane-hero__eyebrow span{width:20px}
+  .ecocane-hero h1{
+    max-width:100%;
+    margin:0 auto!important;
+    font-size:clamp(27px,7.5vw,36px)!important;
+    line-height:1.04!important;
+    letter-spacing:-.04em;
+    text-align:center!important;
+    text-wrap:balance;
+  }
+  .ecocane-hero h1 small{
+    display:block;
+    margin-top:5px;
+    font-size:.48em;
+  }
+  .ecocane-hero__meta{
+    display:flex;
+    width:max-content;
+    max-width:100%;
+    align-items:center;
+    margin:15px auto 0;
+    padding:10px 16px 11px;
+    border-radius:14px;
+    gap:4px;
+    text-align:center;
+  }
+  .ecocane-hero__meta-label{font-size:9px;letter-spacing:.13em}
+  .ecocane-hero__meta strong{font-size:22px}
+  .ecocane-hero__meta-note{font-size:10px}
+  .ecocane-hero__date{
+    right:14px;
+    bottom:12px;
+    font-size:9px;
+  }
+  .ecocane-hero__shine{top:-20%;right:-28%;width:90%}
+}
+@media(max-width:380px){
+  .ecocane-hero{padding-left:14px;padding-right:14px}
+  .ecocane-hero__visual img{max-height:165px}
+  .ecocane-hero h1{font-size:27px!important}
+  .ecocane-hero__meta strong{font-size:20px}
+}
+.ecocane-hero__date{
+  position:absolute;
+  z-index:4;
+  right:22px;
+  bottom:16px;
+  color:rgba(255,255,255,.68);
+  font:500 10px/1 Arial,sans-serif;
+  letter-spacing:.04em;
+  pointer-events:none;
+}
 </style>
 </head>
 
@@ -1438,6 +1543,7 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
     <div class="ecocane-hero__halo"></div>
     <img src="./ECORN_files/ecorn.png" alt="Посуда из кукурузного крахмала" loading="eager">
   </div>
+  <div class="ecocane-hero__date">01.11.2026 г.</div>
   <div class="ecocane-hero__shine"></div>
 </section>
 
