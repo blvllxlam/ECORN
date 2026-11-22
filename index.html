@@ -1666,13 +1666,10 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
 
 
 <style id="ecocane-header-contacts-final-fix">
-/* Шапка: логотип | навигация | контакты справа в один столбец. */
+/* Общий вид контактов: без подписей, телефон выше почты, иконки слева. */
 .ecocane-header .ecocane-header-phone__label,
-.ecocane-header .ecocane-header-email__label {
-  display: none !important;
-}
+.ecocane-header .ecocane-header-email__label { display: none !important; }
 
-/* Контакты — вертикальный список, номер сверху, почта снизу. */
 .ecocane-header .ecocane-header-contacts {
   display: flex !important;
   flex-direction: column !important;
@@ -1731,7 +1728,7 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
   height: 17px !important;
 }
 
-/* Десктоп: три колонки в одной строке. Корзина и аккаунт остаются справа от контактов. */
+/* Десктоп: логотип | навигация | контакты справа в одной строке. */
 @media (min-width: 1101px) {
   .ecocane-header {
     grid-template-columns: 220px minmax(0, 1fr) 310px !important;
@@ -1739,69 +1736,63 @@ tr[id^="category-"] { scroll-margin-top: 110px; }
     align-items: center !important;
     column-gap: 18px !important;
   }
-  .ecocane-header > .ecocane-brand {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-  }
+  .ecocane-header > .ecocane-brand { grid-column: 1 !important; grid-row: 1 !important; }
   .ecocane-header > .ecocane-category-nav {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
+    grid-column: 2 !important; grid-row: 1 !important;
     justify-content: center !important;
   }
   .ecocane-header > .wp-block-group {
-    grid-column: 3 !important;
-    grid-row: 1 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-self: end !important;
-    justify-content: flex-end !important;
-    gap: 12px !important;
-    width: auto !important;
-    min-width: 0 !important;
-    margin: 0 !important;
+    grid-column: 3 !important; grid-row: 1 !important;
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; justify-self: end !important;
+    justify-content: flex-end !important; gap: 12px !important;
+    width: auto !important; min-width: 0 !important; margin: 0 !important;
   }
 }
 
-/* Планшет: сохраняем ту же композицию, но делаем элементы компактнее. */
+/* Планшет: та же последовательность в одной строке, компактнее. */
 @media (min-width: 783px) and (max-width: 1100px) {
   .ecocane-header {
     grid-template-columns: 170px minmax(0, 1fr) 250px !important;
-    grid-template-rows: auto !important;
-    column-gap: 10px !important;
+    grid-template-rows: auto !important; column-gap: 10px !important;
   }
   .ecocane-header > .ecocane-brand { grid-column: 1 !important; grid-row: 1 !important; width: 170px !important; }
   .ecocane-header > .ecocane-category-nav { grid-column: 2 !important; grid-row: 1 !important; gap: 4px 8px !important; }
   .ecocane-header > .wp-block-group {
-    grid-column: 3 !important;
-    grid-row: 1 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-self: end !important;
-    gap: 7px !important;
-    width: auto !important;
-    min-width: 0 !important;
+    grid-column: 3 !important; grid-row: 1 !important;
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; justify-self: end !important;
+    gap: 7px !important; width: auto !important; min-width: 0 !important;
   }
   .ecocane-header .ecocane-header-phone__number { font-size: 14px !important; }
   .ecocane-header .ecocane-header-email__address { font-size: 12px !important; }
   .ecocane-header .ecocane-header-contacts { gap: 5px !important; }
 }
 
-/* Мобильная версия: контакты под логотипом, номер над почтой. */
+/* Мобильная версия: контактный блок прижат вправо; телефон сверху, почта снизу. */
 @media (max-width: 782px) {
   .ecocane-header .ecocane-header-contacts {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100% !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 0 !important;
     gap: 6px !important;
+    margin-left: auto !important;
   }
+  .ecocane-header .ecocane-header-phone,
+  .ecocane-header .ecocane-header-email {
+    justify-content: flex-end !important;
+    width: auto !important;
+    gap: 7px !important;
+  }
+  .ecocane-header .ecocane-header-phone__details,
+  .ecocane-header .ecocane-header-email__details { text-align: right !important; }
   .ecocane-header .ecocane-header-phone__number { font-size: 17px !important; }
   .ecocane-header .ecocane-header-email__address {
     font-size: 14px !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere !important;
+    white-space: nowrap !important;
   }
 }
 @media (max-width: 360px) {
