@@ -562,3 +562,19 @@
   .ecocane-header-messenger__icon { display:none; }
   .ecocane-header-messenger__name { font-size:7.5px; }
 }
+
+
+/* Узкие телефоны: сокращённые плашки мессенджеров и защита почты от наложения. */
+@media (max-width:420px) {
+  .ecocane-header-messenger { justify-content:center; min-width:27px; gap:0; padding:3px 5px; }
+  .ecocane-header-messenger__icon { display:none; }
+  .ecocane-header-messenger--whatsapp { border-color:rgba(37,211,102,.48); background:rgba(37,211,102,.18); }
+  .ecocane-header-messenger--telegram { border-color:rgba(34,158,217,.48); background:rgba(34,158,217,.18); }
+  .ecocane-header-messenger--max { border-color:rgba(22,141,226,.48); background:rgba(22,141,226,.18); }
+  .ecocane-header-email__details { min-width:0; }
+  .ecocane-header-email__address { display:block; max-width:clamp(58px, calc(100vw - 290px), 120px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+}
+@media (max-width:359px) {
+  .ecocane-header-messenger { min-width:25px; padding:2px 4px; }
+  .ecocane-header-email__address { max-width:68px; font-size:7px; }
+}
